@@ -17,6 +17,7 @@ function testGetSpots( lat, lng, successFunc, failedFunc ) {
 
 	sp1.id = 2;
 	sp1.name = "Grillipaikka 1";
+	sp1.description = "This is Grillipaikka place in the cost of the lake. Beautiful, isn't it?";
 	sp1.rating = 5;
 	sp1.pos = { lat: 60.22115239251403, lng: 24.905189998366833 };
 	sp1.owner = user1;
@@ -24,6 +25,7 @@ function testGetSpots( lat, lng, successFunc, failedFunc ) {
 
 	sp2.id = 3;
 	sp2.name = "Dog Place 2";
+	sp2.description = "Dog playground near my place. Do you like it? Join me there!";
 	sp2.rating = 2;
 	sp2.pos = { lat: 60.22253777706261, lng: 24.907464511611828 };
 	sp2.owner = user2;

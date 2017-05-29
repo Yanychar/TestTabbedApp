@@ -149,7 +149,7 @@ var mapManipulator = {
                 
                 console.log( "WILL BE SHOWN: " + this.title + ", " + this.customData.owner.getFullFNfirst()); 
 
-                spotShortDescr.show( this );
+                spotWindow.show( this );
                 
 
             });            

@@ -37,8 +37,7 @@
     <script src="js/testMethods.js"></script>
     <script src="js/init.js"></script>
     <script src="js/map_view.js"></script>
-    <script src="js/spotShortDescr.js"></script>       
-    <script src="js/spotDescription.js"></script>       
+    <script src="js/spotWindow.js"></script>       
     <script src="resources/strings.js"></script>       
 
 </head>
@@ -64,8 +63,33 @@
                 
                 <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-nodisc-icon ui-alt-icon ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>  
                 
-                <p>Aaaaa</p>
-                <p>Bbbb</p>
+                <table style="width:100%" id="spotfull">
+                    <tr>
+                        <td rowspan="3" id="spoticon">
+                            <img src="img/spot1.jpg" height="25%">
+                        </td>
+                        <td colspan="4" id="spotname">
+                            <a href="#" >AAA</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="spotdescr">
+                            Bbbb
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="spotlikes">
+                        </td>
+                        <td id="spotchat">
+                        </td>
+                        <td id="spotcomments">
+                        </td>
+                        <td id="spotowner">
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
                 
             </div>
             

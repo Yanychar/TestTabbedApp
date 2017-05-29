@@ -1,8 +1,10 @@
-var spotShortDescr = {
+var spotWindow = {
     
     initialized:    false,
     infoWindow:     null,
     clickListener:  null,
+    customData:     null,
+    
     
     show:   function( marker ) {
         
@@ -13,16 +15,16 @@ var spotShortDescr = {
         }
 
         this.close();
+        this.customData = marker.customData;
         
-        this.fillContent( marker );
+        this.fillShortContent();
         this.infoWindow.open( marker.getMap(), marker );  
         
         // Add click listener to close infoWindow
         if ( this.clickListener == null ) {
             this.clickListener = marker.getMap().addListener( 'click', function() {
-                console.log( 'Map clicked' ); 
 
-                spotShortDescr.close( marker );
+                spotWindow.close( marker );
             });
         }
 
@@ -69,10 +71,10 @@ var spotShortDescr = {
             iwOuter.find( "a").click( function() {
                 console.log( "Clicked Spot Descr link" );
 
-                spotShortDescr.close();
                 
                 var el = $("#spotViewPopup");
-                console.log( "El: " + el );
+                spotWindow.fillFullContent( el );
+                
                 el.popup( "open" );
             });
             
@@ -80,9 +82,9 @@ var spotShortDescr = {
         });
     },
     
-    fillContent: function( marker ) {
+    fillShortContent: function() {
 
-        if ( marker == undefined || marker == null ) { return;}
+        if ( this.customData == undefined || this.customData == null ) { return;}
         
         var content = 
                   '<div id="iw-container">' 
@@ -91,17 +93,17 @@ var spotShortDescr = {
                 +           '<tr>'
                 +               '<td rowspan="2" >'
                 +                   '<img src="'
-                +                       'img/' + marker.customData.owner.photo + '">'
+                +                       'img/' + this.customData.owner.photo + '">'
                 +               '</td>'
                 +               '<td>'  /* class="iw-subTitle">' */
                 +                   '<a href="#" >'
-                +                       marker.customData.name 
+                +                       this.customData.name
                 +                   '</a>'
                 +               '</td>'
                 +           '</tr>'
                 +           '<tr>'
                 +               '<td>' 
-                +                   by + marker.customData.owner.getFullFNfirst() 
+                +                   by + this.customData.owner.getFullFNfirst() 
                 +               '</td>'
                 +           '</tr>'
                 +       '</table>'
@@ -110,6 +112,26 @@ var spotShortDescr = {
         
         this.infoWindow.setContent( content );
         
+    },
+
+    fillFullContent:    function( spotDescrEl ) {
+
+        var el;
+        // Show spot photo
+//        spotDescrEl.find( "#spoticon img" ).attr( "src", "img/" + this.customData.photo );
+        
+        
+        //Spot name
+        spotDescrEl.find( "#spotname a" ).text( this.customData.name );
+        
+
+        // Spot description
+        spotDescrEl.find( "#spotdescr" ).text( this.customData.description );
+        
+        
+        
+        
+    
     },
     
 }
