@@ -47,7 +47,6 @@ Temporary Items
 .apdisk
 
 /*
-!www/
 !www/*.html
 !www/*.ico
 !www/css
