@@ -46,15 +46,16 @@ function Spot() {
 
 function getSpots( lat, lng, successFunc, failedFunc ) {
     
-    var spLst = testGetSpots(lat, lng,
+    var spLst = testComm.testGetSpots(lat, lng,
         successFunc, failedFunc
     );
     
-    
-    
-    
 }
 
+function getSpot( id ) {
+    
+    var sp = testGetSpot( id, successFunc, failedFunc );
+}
 
 
 

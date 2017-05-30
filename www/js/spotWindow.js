@@ -70,7 +70,7 @@ var spotWindow = {
             
             iwOuter.find( "a").click( function() {
                 console.log( "Clicked Spot Descr link" );
-
+                spotWindow.close();
                 
                 var el = $("#spotViewPopup");
                 spotWindow.fillFullContent( el );
@@ -127,6 +127,11 @@ var spotWindow = {
 
         // Spot description
         spotDescrEl.find( "#spotdescr" ).text( this.customData.description );
+
+        // Spot counters
+        spotDescrEl.find( "#likes" ).text( this.customData.counters.likes );
+        spotDescrEl.find( "#comments" ).text( this.customData.counters.messgs );
+        spotDescrEl.find( "#viewers" ).text( this.customData.counters.viewers );
         
         
         
