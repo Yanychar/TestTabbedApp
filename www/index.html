@@ -11,36 +11,17 @@
     <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<!-- 
-    <link rel="stylesheet" type="text/css" href="lib/appframework/icons.css" />
-    <link rel="stylesheet" type="text/css" href="lib/appframework/af.ui.css" />
--->
-        
     <!-- Include jQuery and JQuery Mobile Mobile stylesheets and libraries -->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-<!-- 
-        
-    <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="lib/fastclick.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>  
--->
         
     <script src='cordova.js'></script>
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/utils.js"></script>
-    <script src="js/userMgmt.js"></script>
-    <script src="js/spotMgmt.js"></script>
-    <script src="js/testMethods.js"></script>
     <script src="js/init.js"></script>
     <script src="js/map_view.js"></script>
-    <script src="js/spotWindow.js"></script>       
-    <script src="resources/strings.js"></script>       
 
 </head>
 
@@ -62,19 +43,40 @@
         <div data-role="main" class="ui-content" id="map_panel" style="position:absolute;width:100%;height:100%;">
             
             
-            
         </div>
 
         <div data-role="footer" data-position="fixed" id="footer">
-            <div data-role="navbar" class="ui-state-persist">
+          <div data-role="tabs" >
+            <div data-role="navbar" >
                 <ul id="tab_bar">
-                    <a href="#" class="ui-btn-active"   >Map</a>
-                    <a href="#"                         >Spots</a>
-                    <a href="#"                         ></a>
-                    <a href="#"                         >Messages</a>
-                    <a href="#"                         >Profile</a>
+                    <a href="#maptab" class="ui-btn-active" >Map</a>
+                    <a href="#spotstab"                     >Spots</a>
+                    <a href="#commentstab"                  ></a>
+                    <a href="#messagestab"                  >Messages</a>
+                    <a href="#profiletab"                   >Profile</a>
                 </ul>
             </div>
+            <div id="maptab" class="ui-content" >
+              <h1>First Page</h1>  
+            </div>
+            <div id="spotstab" class="ui-content" >
+              <h1>Second Page</h1>  
+            </div>
+            <div id="commentstab" class="ui-content" >
+              <h1>Third Page</h1>  
+            </div>
+            <div id="messagestab" class="ui-content" >
+              <h1>Fourth Page</h1>  
+            </div>
+            <div id="profiletab" class="ui-content" >
+              <h1>5th Page</h1>  
+            </div>
+              
+              
+              
+              
+              
+          </div>
         </div>
     </div>
 
@@ -89,7 +91,7 @@
         function initMap() {
 
             console.log("**** InitMap ***");
-            mapManipulator.showMap();
+//            mapManipulator.showMap();
 
         }
     </script>
