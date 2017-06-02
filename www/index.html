@@ -39,9 +39,27 @@
         <div data-role="header" data-position="fixed">
             <h1>This is Header</h1>
         </div>
-        
-        <div data-role="main" class="ui-content" id="map_panel" style="position:absolute;width:100%;height:100%;">
+<!--        
+        <div data-role="main" id="mainpanel" style="position:absolute;width:100%;height:100%;">
+-->
+        <div data-role="main" id="mainpanel">
             
+            <div id="mapview" class="ui-content" style="height: 100%; padding: 0;margin:0;">
+              <h1>First Page</h1>  
+            </div>
+            <div id="spotsview" class="ui-content" >
+              <h1>Second Page</h1>  
+            </div>
+            <div id="commentsview" class="ui-content" >
+              <h1>Third Page</h1>  
+            </div>
+            <div id="messagesview" class="ui-content" >
+              <h1>Fourth Page</h1>  
+            </div>
+            <div id="profileview" class="ui-content" >
+              <h1>5th Page</h1>  
+            </div>
+
             
         </div>
 
@@ -49,31 +67,13 @@
           <div data-role="tabs" >
             <div data-role="navbar" >
                 <ul id="tab_bar">
-                    <a href="#maptab" class="ui-btn-active" >Map</a>
-                    <a href="#spotstab"                     >Spots</a>
-                    <a href="#commentstab"                  ></a>
-                    <a href="#messagestab"                  >Messages</a>
-                    <a href="#profiletab"                   >Profile</a>
+                    <a href="#mapview" ></a>
+                    <a href="#spotsview"                     ></a>
+                    <a href="#commentsview"                  ></a>
+                    <a href="#messagesview"                  ></a>
+                    <a href="#profileview"                   ></a>
                 </ul>
             </div>
-            <div id="maptab" class="ui-content" >
-              <h1>First Page</h1>  
-            </div>
-            <div id="spotstab" class="ui-content" >
-              <h1>Second Page</h1>  
-            </div>
-            <div id="commentstab" class="ui-content" >
-              <h1>Third Page</h1>  
-            </div>
-            <div id="messagestab" class="ui-content" >
-              <h1>Fourth Page</h1>  
-            </div>
-            <div id="profiletab" class="ui-content" >
-              <h1>5th Page</h1>  
-            </div>
-              
-              
-              
               
               
           </div>
@@ -96,8 +96,7 @@
         }
     </script>
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd-DKDRL9vt2SALD68S0CBuzLGE_q0tq4&callback=initMap" async defer ></script>    
-    
+
     
     
     
