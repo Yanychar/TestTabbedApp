@@ -15,13 +15,19 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
     <script src='cordova.js'></script>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/utils.js"></script>
+    <script src="js/userMgmt.js"></script>
+    <script src="js/spotMgmt.js"></script>
+    <script src="js/testMethods.js"></script>
     <script src="js/init.js"></script>
     <script src="js/map_view.js"></script>
+    <script src="js/spotWindow.js"></script>       
+    <script src="resources/strings.js"></script>       
 
 </head>
 
@@ -39,10 +45,9 @@
         <div data-role="header" data-position="fixed">
             <h1>This is Header</h1>
         </div>
-<!--        
+        
         <div data-role="main" id="mainpanel" style="position:absolute;width:100%;height:100%;">
--->
-        <div data-role="main" id="mainpanel">
+            <!-- Spot Description popup -->
             
             <div id="mapview" class="ui-content" style="height: 100%; padding: 0;margin:0;">
               <h1>First Page</h1>  
@@ -59,44 +64,55 @@
             <div id="profileview" class="ui-content" >
               <h1>5th Page</h1>  
             </div>
-
+            
             
         </div>
-
         <div data-role="footer" data-position="fixed" id="footer">
-          <div data-role="tabs" >
-            <div data-role="navbar" >
+            <div data-role="navbar" class="mynavbar">
                 <ul id="tab_bar">
-                    <a href="#mapview" ></a>
-                    <a href="#spotsview"                     ></a>
-                    <a href="#commentsview"                  ></a>
-                    <a href="#messagesview"                  ></a>
-                    <a href="#profileview"                   ></a>
+                    <li class="tab_container">
+                        <a href="#mapview" data-icon="map">	</a>
+                    </li>
+                    <li class="tab_container">
+                        <a href="#spotsview" data-icon="spot"></a>
+                        <span class="notification-counter"></span>
+                    </li>
+                
+                    <li class="tab_container">
+                        <span class="notification-counter"></span>
+                        <a href="#commentsview" data-icon="comments"></a>
+                    </li>
+                    <li class="tab_container">
+                        <span class="notification-counter"></span>
+                        <a href="#messagesview" data-icon="messages" ></a>
+                    </li>
+                    <li class="tab_container">
+                        <a href="#profileview" data-icon="profile" ></a>
+                    </li>
                 </ul>
             </div>
-              
-              
-          </div>
         </div>
     </div>
+        
 
-    <script>
+<script>
 
-        initApplication();
+    initApplication();
+    
+    
+    
+    
+    //    var map;
+    function initMap() {
+        
+        console.log("**** InitMap ***");
+//        mapManipulator.showMap();
+        
+    }
+</script>
 
-
-
-
-        //    var map;
-        function initMap() {
-
-            console.log("**** InitMap ***");
-//            mapManipulator.showMap();
-
-        }
-    </script>
-
-
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd-DKDRL9vt2SALD68S0CBuzLGE_q0tq4&callback=initMap" async defer ></script>    
+    
     
     
     

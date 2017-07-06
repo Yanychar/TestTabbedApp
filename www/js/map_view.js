@@ -17,7 +17,6 @@ var mapManipulator = {
 
                 mapManipulator.myMap = mapManipulator.drawMap( mapManipulator.currLoc );
 
-                          
                 
             };
             function fail( error ) {
@@ -29,6 +28,8 @@ var mapManipulator = {
                           }};
                 success( pos );              
                 
+                
+//                mapManipulator.drawMap( mapManipulator.myMap );
             };
 
             // Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
@@ -59,10 +60,12 @@ var mapManipulator = {
         };    
 
         var map = new google.maps.Map( 
-                                    document.getElementById("map_panel"), 
+                                    document.getElementById("mapview"), 
                                     myOptions );
         
         return map;
     },
+    
+
     
 }
