@@ -106,12 +106,12 @@
   display: block;
   text-align: center;
   padding: 1em;
-  
+  height: 1em;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-#three:after {
+#footer a::after {
   content: attr( counter-value );
   color: white;
   font-size: 70%;
@@ -124,3 +124,8 @@
   top: -10px;  
   
 }
+
+.hidden::after {
+    display: none;
+}
+

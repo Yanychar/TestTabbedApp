@@ -105,6 +105,8 @@ function updateNavbar() {
 
 //    var status = testComm.testGetStatus( 1, success, fail );
     
+    navbar.setCounter( "mapbut", 10 );
+        console.log( "Status was read successfully. ");
     function success( result ) {
         console.log( "Status was read successfully. Status: " + JSON.stringify( result ));
         
